@@ -1,12 +1,8 @@
-import * as React from "react"
+import React from "react"
 import { createRoot } from "react-dom/client"
-import { RouterProvider } from "react-router-dom"
-import router from "./router"
 
-import "./styles/index.scss"
-import "bootstrap/dist/css/bootstrap.css"
+const el = document.createElement("div")
+const root = createRoot(el)
 
-const appEl = document.getElementById("app") as HTMLElement
-const root = createRoot(appEl) 
-
-root.render(<RouterProvider router={router}/>)
+root.render(<h1>Hello World</h1>)
+document.body.appendChild(el)
